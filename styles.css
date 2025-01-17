@@ -4,3 +4,66 @@
 body {
   font-family: sans-serif;
 }
+ul {
+	list-style: none;
+	padding-left: 20px;
+}
+li::before{
+	content: "*";
+	color:#B370FF;
+	font-size: 16px;
+	margin-right: 8px;
+}
+.banner {
+    background: linear-gradient(to right, #FFCCFA, #FF99CC, #FF6E9E);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: 'Verdana', sans-serif;
+}
+/* Carousel container */
+.vertical-carousel {
+    width: 300px; /* Adjust width */
+    height: 50px; /* Adjust height to fit one line of text */
+    overflow: hidden; /* Hide overflowing text */
+    border: 1px solid #ddd; /* Optional: add a border */
+    position: relative;
+    background-color: #f9f9f9; /* Optional: background color */
+}
+
+/* Text container */
+.carousel-text {
+    display: flex;
+    flex-direction: column; /* Stack text items vertically */
+    animation: scrollText 5s linear infinite; /* Smooth scrolling animation */
+}
+
+/* Individual text items */
+.carousel-text p {
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+    line-height: 50px; /* Match container height */
+    color: #333;
+}
+
+/* Keyframes for vertical scrolling */
+@keyframes scrollText {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-50px); /* Moves up by one line */
+    }
+    50% {
+        transform: translateY(-100px); /* Moves up by two lines */
+    }
+    75% {
+        transform: translateY(-150px); /* Moves up by three lines */
+    }
+    100% {
+        transform: translateY(0); /* Back to the start */
+    }
+}
